@@ -1,9 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      filename 'a'
+    }
+
+  }
   stages {
     stage('Run images') {
       steps {
-        sh 'docker ps'
+        sh 'telnet'
       }
     }
   }
