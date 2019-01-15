@@ -3,9 +3,9 @@ pipeline {
     dockerfile true
   }
   stages {
-    stage('Test') {
+    stage('Run images') {
       steps {
-        input 'Finished using the web site? (Click "Proceed" to continue'
+        sh 'docker run f29bab4cdb3a1259fa40c27f891efeb6424109b4 -p 3000:3000'
       }
     }
   }
