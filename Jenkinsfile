@@ -1,12 +1,11 @@
 pipeline {
   agent {
     dockerfile true
-
   }
   stages {
     stage('Test') {
       steps {
-        sh 'echo "Hello"'
+        input 'Finished using the web site? (Click "Proceed" to continue'
       }
     }
   }
