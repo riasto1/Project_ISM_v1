@@ -15,7 +15,10 @@ pipeline {
     }
     stage('Run images') {
       steps {
-        sh 'myDocker run f29bab4cdb3a1259fa40c27f891efeb6424109b4 -p 3000:3000'
+        script {
+          docker run f29bab4cdb3a1259fa40c27f891efeb6424109b4
+        }
+
       }
     }
   }
