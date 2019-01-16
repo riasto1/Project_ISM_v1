@@ -8,7 +8,7 @@ pipeline {
         script {
           def dockerHome = tool 'myDocker'
 
-          env.HOME = "${dockerHome}/bin:${env.HOME}"
+          env.PATH = "${dockerHome}/bin:${env.PATH}"
         }
 
       }
