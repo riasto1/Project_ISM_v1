@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Run images') {
       steps {
-        sh 'docker run myimage -p 3000:3000'
+        sh 'docker run -p 3000:3000 myimage '
       }
     }
   }
