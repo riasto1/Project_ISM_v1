@@ -2,7 +2,7 @@ pipeline {
   agent none
   stages {
     stage('Run images') {
-      agent {
+      agent any{
         dockerfile true
       }
       steps {
