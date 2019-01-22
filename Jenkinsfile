@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build images') {
       steps {
-        sh 'docker build -t myimage -f Dockerfile .'
+        sh '''whoami
+docker build -t myimage -f Dockerfile .'''
       }
     }
     stage('Run images') {
